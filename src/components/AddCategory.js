@@ -15,6 +15,7 @@ export const AddCategory = ({setCategories}) => {
     const handleSubmit = (e) => {
         // Evitar postback del form
         e.preventDefault();
+        console.log('handleSubmit', inputValue);
 
         if (inputValue.trim().length > 2) {
             setCategories( cats => [inputValue,  ...cats]);
