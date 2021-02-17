@@ -10,13 +10,16 @@ export const useFetchGifs = (category) => {
     // para que solo se ejecute una vez
     // el array es necesario
     useEffect(() => {
+        
         getGifs(category)
             .then(imgs => {
+
                 setState({
                     data: imgs,
                     loading: false
                 });
             });
+
     }, [category])
 
 
